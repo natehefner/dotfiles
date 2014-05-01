@@ -85,26 +85,10 @@ Bundle 'gmarik/vundle'
 Bundle 'othree/html5.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-markdown'
-Bundle 'fs111/pydoc.vim'
 Bundle 'lepture/vim-css'
 Bundle 'groenewege/vim-less'
 Bundle 'lepture/vim-jinja'
 Bundle 'tpope/vim-haml'
-Bundle 'daylerees/colour-schemes', {"rtp": "vim-themes/"}
-
-" PYTHON "
-Bundle 'nvie/vim-flake8'
-
-" RUBY "
-Bundle 'tpope/vim-rails'
-Bundle 'mileszs/apidock.vim'
-Bundle 'tpope/vim-cucumber'
-
-" JS "
-
-
-" C/C++ "
-
 
 " IDE "
 Bundle 'scrooloose/nerdtree'
@@ -112,19 +96,14 @@ Bundle 'majutsushi/tagbar'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
-Bundle 'TaskList.vim'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
+Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 
 " VC "
 Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-git'
 
 " MISC "
-Bundle 'mattn/gist-vim'
 Bundle 'suan/vim-instant-markdown'
 
 filetype plugin indent on
@@ -149,6 +128,7 @@ let g:syntastic_warning_symbol='⚠'
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_args = '--ignore="F401"'
 let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_jshint_exec = 'usr/local/bin/jshint'
 let g:syntastic_coffee_checkers = ['coffeelint', 'coffee']
 let g:syntastic_disabled_filetypes=['html']
 
