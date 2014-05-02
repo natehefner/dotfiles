@@ -119,6 +119,10 @@ autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 autocmd BufNewFile,BufRead *.less set filetype=less
 nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
 
+" MARKDOWN FIX
+"""""""""""""""
+au BufRead,BufNewFile *.md set filetype=markdown
+
 " SYNTASTIC SETTINGS
 """""""""""""""""""""
 let g:syntastic_check_on_open=1
@@ -132,6 +136,9 @@ let g:syntastic_jshint_exec = 'usr/local/bin/jshint'
 let g:syntastic_coffee_checkers = ['coffeelint', 'coffee']
 let g:syntastic_disabled_filetypes=['html']
 
-" TASKLIST SETTINGS
-"""""""""""""""""""""
-map <leader>td <Plug>TaskList
+" SNIPPETS SETTINGS
+""""""""""""""""""""
+let g:UltiSnipsSnippetsDir = "~/.vim/bundle/vim-snippets/UltiSnips"
+let g:UltiSnipsExpandTrigger = "<f5>"
+let g:UltiSnipsJumpForwardTrigger = "<c-b>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
